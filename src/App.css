@@ -1,0 +1,370 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #07111f;
+  color: #e5e7eb;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+}
+
+.sidebar {
+  background: #020617;
+  border-right: 1px solid #1e293b;
+  padding: 24px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #22c55e;
+}
+
+.side {
+  color: #94a3b8;
+  margin: 12px 0 25px;
+  line-height: 1.5;
+}
+
+.nav {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-weight: 800;
+  transition: 0.2s;
+}
+
+.nav:hover,
+.nav.active {
+  background: #2563eb;
+  color: white;
+}
+
+.main {
+  padding: 24px;
+  max-width: 1500px;
+  width: 100%;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.muted {
+  color: #94a3b8;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.stat,
+.panel {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 22px;
+  padding: 18px;
+  box-shadow: 0 14px 35px #0003;
+}
+
+.stat span {
+  color: #94a3b8;
+}
+
+.stat h2 {
+  margin: 8px 0 0;
+  font-size: 28px;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+input,
+select,
+textarea,
+button {
+  width: 100%;
+  border: 1px solid #334155;
+  background: #020617;
+  color: #e5e7eb;
+  border-radius: 13px;
+  padding: 13px;
+  font-size: 15px;
+}
+
+textarea {
+  grid-column: 1 / -1;
+  min-height: 85px;
+}
+
+button {
+  border: 0;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.green {
+  background: #16a34a;
+}
+
+.blue {
+  background: #2563eb;
+}
+
+.red {
+  background: #dc2626;
+}
+
+.orange {
+  background: #f59e0b;
+}
+
+.cyan {
+  background: #0891b2;
+}
+
+.greenText {
+  color: #22c55e;
+}
+
+.redText {
+  color: #ef4444;
+}
+
+.yellowText {
+  color: #f59e0b;
+}
+
+.toolbar {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 12px;
+  margin: 14px 0;
+}
+
+.client,
+.employee,
+.task,
+.deal {
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 18px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.clientTop,
+.employeeTop,
+.taskTop,
+.dealTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.meta {
+  color: #94a3b8;
+  line-height: 1.6;
+  margin-top: 6px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: 13px;
+  color: white;
+  background: #2563eb;
+}
+
+.free {
+  background: #16a34a;
+}
+
+.assigned {
+  background: #2563eb;
+}
+
+.seen {
+  background: #8b5cf6;
+}
+
+.onway {
+  background: #f59e0b;
+}
+
+.atclient {
+  background: #06b6d4;
+}
+
+.working {
+  background: #14b8a6;
+}
+
+.done {
+  background: #22c55e;
+}
+
+.problem {
+  background: #dc2626;
+}
+
+.clientActions,
+.taskActions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.taskActions2,
+.smallActions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.moneyGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.moneyBox {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.moneyBox span {
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.moneyBox b {
+  display: block;
+  margin-top: 6px;
+  font-size: 17px;
+}
+
+.lock {
+  max-width: 420px;
+  margin: 60px auto;
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 22px;
+  padding: 24px;
+}
+
+.table {
+  overflow: auto;
+}
+
+.thead,
+.row {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 12px;
+  min-width: 950px;
+  align-items: center;
+}
+
+.thead {
+  color: #94a3b8;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 12px;
+  border-bottom: 1px solid #334155;
+  padding: 12px;
+}
+
+.row {
+  border-bottom: 1px solid #1e293b;
+  padding: 14px 12px;
+}
+
+.overdue {
+  background: #dc2626;
+}
+
+.today {
+  background: #f59e0b;
+}
+
+.waiting {
+  background: #16a34a;
+}
+
+@media (max-width: 950px) {
+  .app {
+    grid-template-columns: 1fr;
+  }
+
+  .main,
+  .sidebar {
+    padding: 18px;
+  }
+
+  .stats,
+  .form,
+  .moneyGrid,
+  .clientActions,
+  .taskActions,
+  .taskActions2,
+  .smallActions,
+  .toolbar {
+    grid-template-columns: 1fr;
+  }
+
+  .clientTop,
+  .employeeTop,
+  .taskTop,
+  .dealTop,
+  .top {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

@@ -1,0 +1,12 @@
+export const n = (v) => Number(v || 0);
+
+export const cleanPhone = (phone) =>
+  String(phone || "").replace(/\D/g, "");
+
+export function paymentStatus(date) {
+  if (!date) return "Нет даты";
+  const today = new Date().toISOString().slice(0, 10);
+  if (date < today) return "Просрочка";
+  if (date === today) return "Сегодня";
+  return "Ожидается";
+}
